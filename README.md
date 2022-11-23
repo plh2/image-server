@@ -24,7 +24,8 @@ axios
   })
 ```
 
-## review uploaded image
+## review uploaded images
 
+```
 http://<yoru domain>:5432/public
-
+```
