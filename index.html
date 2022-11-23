@@ -16,7 +16,7 @@
       const file = input.files[0];
       const form = new FormData();
       form.append('image', file, file.name);
-      axios.post('http://localhost/upload', form, {
+      axios.post('https://incredible-pavlova-523de9.netlify.app/upload', form, {
         headers: {
           "Access-Control-Allow-Origin": '*'
         }
