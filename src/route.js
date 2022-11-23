@@ -10,10 +10,10 @@ const app = express();
 
 app.use(cors());
 app.use(formidableMiddleware());
-app.use("/static", express.static(path.join(__dirname, "public")));
+app.use("/static", express.static(path.join(__dirname, '..', "public")));
 
 app.get("/public", async (req, res) => {
-  const fileList = fs.readdirSync(path.join(__dirname, "public"));
+  const fileList = fs.readdirSync(path.join(__dirname, '..', "public"));
   res.setHeader("Content-Type", "text/html");
   res.end(`
     <ul>
