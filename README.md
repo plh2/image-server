@@ -10,22 +10,22 @@ yarn
 yarn run buid
 ```
 
-## upload image
+## upload image(Browser|NodeJS)
 
-```
+```js
 cosnt axios = require('axios');
-
+let formData = new FormData();
 const url = 'http://<yoru domain>:5432/upload'
 
-axios
-  .post(url, formData, {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Access-Control-Allow-Origin": "207.148.118.120",
-  })
+formData.append("image", blob, "xxx.png");
+const res = await axios.post(url, formData, {
+  "Content-Type": `multipart/form-data;`,
+});
+console.log(res.data.data) // image url;
 ```
 
 ## review uploaded images
 
-```
+```bash
 http://<yoru domain>:5432/public
 ```
