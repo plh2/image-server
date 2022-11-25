@@ -7,7 +7,7 @@
 ```bash
 git clone https://github.com/plh2/image-server.git
 yarn
-yarn run buid
+yarn run start
 ```
 
 ## upload image(Browser|NodeJS)
