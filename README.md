@@ -4,7 +4,7 @@
 
 ## DEPLOY
 
-```
+```bash
 git clone https://github.com/plh2/image-server.git
 yarn
 yarn run buid
@@ -32,4 +32,8 @@ http://<yoru domain>:5432/public
 
 ## Demo
 
-http://207.148.118.120:5432
+[index.html](http://207.148.118.120:5432/index.html)
+
+## i18n
+
+[English](https://github.com/plh2/image-server) [简体中文](https://github.com/plh2/image-server/blob/main/zh-CN.md)
