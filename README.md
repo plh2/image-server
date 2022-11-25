@@ -29,3 +29,7 @@ console.log(res.data.data) // image url;
 ```bash
 http://<yoru domain>:5432/public
 ```
+
+## Demo
+
+http://207.148.118.120:5432
