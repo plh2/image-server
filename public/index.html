@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="file">
+  <button onclick="handleSubmit()">upload</button>
+  <br />
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script>
+    async function handleSubmit() {
+      const input = document.querySelector('input')
+      const file = input.files[0];
+      const form = new FormData();
+      form.append('image', file, file.name);
+      const res = await axios.post('http://207.148.118.120:5432/upload', form)
+      const url = res.data.data;
+      console.log(url);
+      const img = document.createElement('img')
+      img.src = url;
+      img.width = '300';
+      document.body.appendChild(img);
+    }
+  </script>
+</body>
+</html>
